@@ -29,7 +29,7 @@ class Catcher
 
   void le_catch(Raindrop i)
   {
-    if (dist(x, y, i.loc.x, i.loc.y) <= (dx/2))
+    if (dist(x, y, i.loc.x, i.loc.y) <= (i.d/2))
     {
       println("Le catch");
       score ++;
