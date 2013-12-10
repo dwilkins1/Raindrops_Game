@@ -1,26 +1,28 @@
 class Raindrop
 {
 
-  PVector loc = new PVector(random(0, width), random(-100, 0));
+  PVector loc = new PVector(random(0, width), random(-1000, 0));
   PVector vel = new PVector(0, 20);
-  int d = int(random(10, 40));
+  int d = 100;
+  PImage drop;
 
   Raindrop()
   {
+    drop = loadImage("Raindrop.png");
   }
 
   void Raindrop()
   {
-    fill(0, 255, 255);
-    ellipse(loc.x-d/2, loc.y-d/2, d, d);
+    image(drop,loc.x, loc.y);
     loc.add(vel);
   }
 
   void reset()
   {
-    if (loc.y > height + 20)
+    if (loc.y > height + 200)
     {
       loc.y = 0;
+      loc.x = int(random(0, width));
     }
   }
 }
