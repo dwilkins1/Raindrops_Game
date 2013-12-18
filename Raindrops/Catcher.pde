@@ -1,12 +1,15 @@
 class Catcher
 {
 
+  PImage catcher;
+  
   Catcher()
   {
+    catcher = loadImage("marill_.png");
   }
 
   float x = mouseX;
-  float y = height - 50;
+  float y = height - 100;
   int score = 0;
   int dx = 75;
   int dy = 75;
@@ -14,9 +17,8 @@ class Catcher
   void catcher()
   {
     x = mouseX;
-    ellipseMode(CENTER);
-    fill(255);
-    ellipse(x, y, dx, dy);
+    image(catcher, x, y);
+    catcher.resize(dx,dy);
   }
 
   void score()

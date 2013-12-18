@@ -1,19 +1,23 @@
 class Raindrop
 {
-
-  PVector loc = new PVector(random(0, width), random(-1000, 0));
-  PVector vel = new PVector(0, 20);
+  PVector vel;
+  PVector loc;
   int d = 100;
   PImage drop;
+  int y;
 
-  Raindrop()
-  {
+
+  Raindrop() {
+    loc = new PVector(random(0, width), random(-30, -10));
+    vel = new PVector(0, y);    
     drop = loadImage("Raindrop.png");
+    println(y);
   }
 
   void Raindrop()
   {
-    image(drop,loc.x, loc.y);
+    image(drop, loc.x, loc.y);
+    vel.y = f;
     loc.add(vel);
   }
 
