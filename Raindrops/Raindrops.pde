@@ -1,13 +1,22 @@
+//Define classes for raindrop, catcher, and timer
 Raindrop R1;
 Catcher C1;
 Timer T1 = new Timer();
 
+//Create array for raindrops
+
 Raindrop[] Raindrop = new Raindrop[50];
+
+//Variables relating to program
+
 PImage img;
 int index = 0;
 boolean pause = true;
 int f;
+int life = 3;
 
+
+//Set size, framerate, create catcher and raindrop array
 void setup()
 {
   size(1280, 720); 
@@ -20,7 +29,7 @@ void setup()
   img = loadImage("Assassins_Whale.jpg");
 }
 
-
+//Adds background and implements raindrops, catcher, and timer
 
 void draw()
 {
@@ -31,8 +40,11 @@ void draw()
   {
     for (int i = 0; i < index; i++)
     {
+      Raindrop[i].lives();
       Raindrop[i].Raindrop();
       Raindrop[i].reset();
+      
+      
       C1.le_catch(Raindrop [i]);
       C1.score();
     }
@@ -40,7 +52,10 @@ void draw()
     C1.catcher();
     T1.time();
     time();
+    C1.gameover();
   }
+
+  //Creates four difficulties that change the speed of the raindrops
 
   difficulty();
   println(f);
@@ -50,6 +65,7 @@ int time1 = 0;
 int time2 = 0;
 int time3 = 0;
 boolean newdrop = true;
+
 
 void time()
 {
@@ -118,25 +134,25 @@ void difficulty()
     fill(0);
     text("Hero Mode", width/2, 540);
   }
-    println(mouseY);
+  println(mouseY);
   if (mouseX > width/2 -100 && mouseX < width/2 + 100 && mouseY > 150 && mouseY < 250 && mousePressed)
   {
     diff = 1;
     pause = false;
   }
-  
+
   if (mouseX > width/2 -100 && mouseX < width/2 + 100 && mouseY > 260 && mouseY < 360 && mousePressed)
   {
     diff = 2;
     pause = false;
   }
-  
+
   if (mouseX > width/2 -100 && mouseX < width/2 + 100 && mouseY > 370 && mouseY < 470 && mousePressed)
   {
     diff = 3;
     pause = false;
   }
-  
+
   if (mouseX > width/2 -100 && mouseX < width/2 + 100 && mouseY > 480 && mouseY < 580 && mousePressed)
   {
     diff = 4;
