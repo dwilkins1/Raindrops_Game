@@ -2,5 +2,6 @@ The Raindrops Game is played by moving a catcher at the bottom of the screen tha
 
 Bugs and oops:
 
-I don't even know what I pressed in Github, but I think it reverted my program to an earlier copy without lives and a game over screen. I cannot for the life of me remember how I did it, and now my lives basically don't work. Rather than add this to the master branch, I have added it to the Lives and Game Over branch. 
-The problem with the lives is that I can't remember what I did to work around an issue the first time, so when one life is lost the others follow very quickly. Something to do with the height of the raindrop, but I can't fix it now. I suppose it's better to keep my working copy committed to the master branch. If I can get some help finding my old copy of the game with working lives it would be greatly appreciated.
+I don't even know what I pressed in Github, but I think it reverted my program to an earlier copy without lives and a game over screen. ACK IT HAPPENED AGAIN. I'll just bring my back-up (which I made this time, luckily) to school tomorrow. 
+
+Actual bug: When you press the mouse on the game over screen stuff pops back up and the game keeps playing in a glitchy manner. Just don't press the mouse on the game over screen. 
