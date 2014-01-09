@@ -35,39 +35,5 @@ class Raindrop
       loc.x = int(random(0, width));
     }
   }
-
-
-
-  void lives()
-  {
-
-    if (loc.y >= height && loc.x < 14000 && life == 3)
-    {
-      life -= 1;
-    }
-    if (loc.y >= height + 100 && loc.x < 13000 && life == 2)
-    {
-      life -= 1;
-    }
-    if (loc.y >= height + 200 && loc.x < 12000 && life == 1)
-    {
-      life -= 1;
-    }
-
-    fill(200, 0, 0);
-
-    if (life == 3)
-    {
-      ellipse(1200, 50, 50, 50);
-    }
-    if (life == 3 || life == 2)
-    {
-      ellipse(1140, 50, 50, 50);
-    }
-    if (life == 3 || life == 2 || life == 1)
-    {
-      ellipse(1080, 50, 50, 50);
-    }
-  }
 }
 

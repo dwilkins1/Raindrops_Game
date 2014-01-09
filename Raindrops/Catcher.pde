@@ -59,15 +59,5 @@ class Catcher
       }
     }
   }
-
-  void gameover()
-  {
-    if (life == 1)
-    {
-      pause = true;
-      fill(0);
-      rect(width, height, 0, 0);
-    }
-  }
 }
 
