@@ -7,6 +7,10 @@ class Raindrop
   int y;
 
 
+
+
+  //Creates raindrops with locations and velocities
+
   Raindrop() {
     loc = new PVector(random(0, width), random(-30, -10));
     vel = new PVector(0, y);    
@@ -20,6 +24,8 @@ class Raindrop
     vel.y = f;
     loc.add(vel);
   }
+
+  //Moves raindrops when they are caught 
 
   void reset()
   {

@@ -1,9 +1,13 @@
 class Catcher
 {
 
-  PImage catcher;
-  
-  Catcher()
+  //Image for catcher
+
+    PImage catcher;
+
+  //Set location and size of catcher
+
+    Catcher()
   {
     catcher = loadImage("marill_.png");
   }
@@ -18,8 +22,10 @@ class Catcher
   {
     x = mouseX;
     image(catcher, x, y);
-    catcher.resize(dx,dy);
+    catcher.resize(dx, dy);
   }
+
+  //Creates a score based on number of drops caught
 
   void score()
   {
@@ -28,6 +34,7 @@ class Catcher
     text(score, 100, 100);
   }
 
+  //Allows raindrops to be caught
 
   void le_catch(Raindrop i)
   {
@@ -35,7 +42,21 @@ class Catcher
     {
       println("Le catch");
       score ++;
-      i.loc.x = 10000;
+      if (life == 3)
+      {
+
+        i.loc.x = 14000;
+      }
+      if (life == 2)
+      {
+
+        i.loc.x = 13000;
+      }
+      if (life == 1)
+      {
+
+        i.loc.x = 12000;
+      }
     }
   }
 }
